@@ -1,0 +1,379 @@
+
+
+IMPORTANT WARNING: Sequences C.ZA.2007.503_13503_A6.KT183280 and C.ZA.2007.503_13503_F5.KT183286 are exactly identical
+
+IMPORTANT WARNING
+Found 1 sequence that is exactly identical to other sequences in the alignment.
+Normally they should be excluded from the analysis.
+
+Just in case you might need it, an alignment file with 
+sequence duplicates removed is printed to file clustalo.fasta.reduced
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.10 released by Alexandros Stamatakis on March 2017.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 6643 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 12.68%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 100 inferences on the original alignment using 100 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heterogeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 6643
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+
+RAxML was called as follows:
+
+../../ecdysis/software/standard-RAxML-8.2.10/raxmlHPC-PTHREADS-AVX2 -s clustalo.fasta -n top -T 6 -m GTRGAMMA -p 1989 -# 100 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.364 0.175 0.240 0.221 
+
+Inference[0]: Time 870.237841 GAMMA-based likelihood -355088.016231, best rearrangement setting 10
+alpha[0]: 0.408779 rates[0] ac ag at cg ct gt: 1.818455 4.334572 0.862300 0.833663 5.474526 1.000000 
+Inference[1]: Time 812.282957 GAMMA-based likelihood -355066.698827, best rearrangement setting 15
+alpha[0]: 0.408602 rates[0] ac ag at cg ct gt: 1.800087 4.316945 0.861421 0.822853 5.455212 1.000000 
+Inference[2]: Time 1606.682576 GAMMA-based likelihood -355118.007845, best rearrangement setting 10
+alpha[0]: 0.409076 rates[0] ac ag at cg ct gt: 1.818082 4.319871 0.855513 0.830525 5.523327 1.000000 
+Inference[3]: Time 900.902524 GAMMA-based likelihood -355053.952340, best rearrangement setting 10
+alpha[0]: 0.407777 rates[0] ac ag at cg ct gt: 1.838135 4.382598 0.875644 0.848536 5.564886 1.000000 
+Inference[4]: Time 664.128212 GAMMA-based likelihood -355285.121901, best rearrangement setting 10
+alpha[0]: 0.408831 rates[0] ac ag at cg ct gt: 1.835215 4.402136 0.871020 0.850245 5.520788 1.000000 
+Inference[5]: Time 606.170740 GAMMA-based likelihood -355151.092494, best rearrangement setting 10
+alpha[0]: 0.408309 rates[0] ac ag at cg ct gt: 1.822228 4.342565 0.864703 0.839817 5.504975 1.000000 
+Inference[6]: Time 1612.294344 GAMMA-based likelihood -355180.322340, best rearrangement setting 10
+alpha[0]: 0.407993 rates[0] ac ag at cg ct gt: 1.808681 4.334273 0.864214 0.841614 5.468250 1.000000 
+Inference[7]: Time 890.163380 GAMMA-based likelihood -355052.986794, best rearrangement setting 15
+alpha[0]: 0.408084 rates[0] ac ag at cg ct gt: 1.834032 4.371783 0.870661 0.848133 5.567947 1.000000 
+Inference[8]: Time 1275.756990 GAMMA-based likelihood -355060.151822, best rearrangement setting 10
+alpha[0]: 0.408184 rates[0] ac ag at cg ct gt: 1.809309 4.309058 0.858866 0.838223 5.456726 1.000000 
+Inference[9]: Time 1097.450873 GAMMA-based likelihood -355040.228495, best rearrangement setting 10
+alpha[0]: 0.409052 rates[0] ac ag at cg ct gt: 1.796740 4.285617 0.855649 0.829631 5.436977 1.000000 
+Inference[10]: Time 1193.870331 GAMMA-based likelihood -355229.280356, best rearrangement setting 10
+alpha[0]: 0.407456 rates[0] ac ag at cg ct gt: 1.795034 4.292891 0.852052 0.826969 5.422781 1.000000 
+Inference[11]: Time 1021.914153 GAMMA-based likelihood -355106.554582, best rearrangement setting 15
+alpha[0]: 0.407873 rates[0] ac ag at cg ct gt: 1.792264 4.294684 0.853834 0.827213 5.442774 1.000000 
+Inference[12]: Time 983.902805 GAMMA-based likelihood -355150.413817, best rearrangement setting 20
+alpha[0]: 0.408501 rates[0] ac ag at cg ct gt: 1.824278 4.364231 0.877831 0.846779 5.531265 1.000000 
+Inference[13]: Time 815.183824 GAMMA-based likelihood -355068.488871, best rearrangement setting 15
+alpha[0]: 0.407742 rates[0] ac ag at cg ct gt: 1.814302 4.324060 0.857699 0.835803 5.467190 1.000000 
+Inference[14]: Time 1604.009734 GAMMA-based likelihood -355147.705379, best rearrangement setting 15
+alpha[0]: 0.408142 rates[0] ac ag at cg ct gt: 1.826511 4.344505 0.866881 0.842011 5.538472 1.000000 
+Inference[15]: Time 1473.220769 GAMMA-based likelihood -355062.017677, best rearrangement setting 15
+alpha[0]: 0.408355 rates[0] ac ag at cg ct gt: 1.806506 4.305785 0.854516 0.831622 5.477825 1.000000 
+Inference[16]: Time 1496.709958 GAMMA-based likelihood -355115.104263, best rearrangement setting 20
+alpha[0]: 0.408278 rates[0] ac ag at cg ct gt: 1.817716 4.327689 0.858019 0.831341 5.494716 1.000000 
+Inference[17]: Time 1161.310125 GAMMA-based likelihood -355077.125565, best rearrangement setting 15
+alpha[0]: 0.408423 rates[0] ac ag at cg ct gt: 1.797438 4.312169 0.853798 0.825558 5.433996 1.000000 
+Inference[18]: Time 1258.517350 GAMMA-based likelihood -355044.144246, best rearrangement setting 10
+alpha[0]: 0.408324 rates[0] ac ag at cg ct gt: 1.819595 4.348408 0.868664 0.835153 5.516698 1.000000 
+Inference[19]: Time 1232.087718 GAMMA-based likelihood -355225.851146, best rearrangement setting 15
+alpha[0]: 0.408040 rates[0] ac ag at cg ct gt: 1.813786 4.332561 0.861456 0.838870 5.471770 1.000000 
+Inference[20]: Time 1730.554361 GAMMA-based likelihood -355139.355145, best rearrangement setting 10
+alpha[0]: 0.407468 rates[0] ac ag at cg ct gt: 1.822673 4.353236 0.866074 0.838020 5.495044 1.000000 
+Inference[21]: Time 1279.766125 GAMMA-based likelihood -355113.163140, best rearrangement setting 20
+alpha[0]: 0.409108 rates[0] ac ag at cg ct gt: 1.818070 4.350568 0.865531 0.840618 5.528589 1.000000 
+Inference[22]: Time 801.852588 GAMMA-based likelihood -355132.807554, best rearrangement setting 15
+alpha[0]: 0.407565 rates[0] ac ag at cg ct gt: 1.809202 4.341645 0.866821 0.845467 5.470612 1.000000 
+Inference[23]: Time 1186.384272 GAMMA-based likelihood -355111.471676, best rearrangement setting 20
+alpha[0]: 0.408534 rates[0] ac ag at cg ct gt: 1.842006 4.400280 0.871056 0.841343 5.540005 1.000000 
+Inference[24]: Time 1390.166546 GAMMA-based likelihood -355145.267528, best rearrangement setting 10
+alpha[0]: 0.408824 rates[0] ac ag at cg ct gt: 1.796962 4.282735 0.859469 0.833884 5.455458 1.000000 
+Inference[25]: Time 1020.826826 GAMMA-based likelihood -355062.174983, best rearrangement setting 15
+alpha[0]: 0.407819 rates[0] ac ag at cg ct gt: 1.810103 4.331992 0.852773 0.828866 5.470762 1.000000 
+Inference[26]: Time 988.865341 GAMMA-based likelihood -355178.986130, best rearrangement setting 20
+alpha[0]: 0.408378 rates[0] ac ag at cg ct gt: 1.821152 4.333931 0.861917 0.862262 5.515131 1.000000 
+Inference[27]: Time 750.194702 GAMMA-based likelihood -355083.562514, best rearrangement setting 15
+alpha[0]: 0.409130 rates[0] ac ag at cg ct gt: 1.829947 4.357045 0.867572 0.847762 5.572798 1.000000 
+Inference[28]: Time 638.685365 GAMMA-based likelihood -355053.319658, best rearrangement setting 10
+alpha[0]: 0.408429 rates[0] ac ag at cg ct gt: 1.815677 4.328495 0.862832 0.831264 5.486867 1.000000 
+Inference[29]: Time 880.892563 GAMMA-based likelihood -355034.639748, best rearrangement setting 15
+alpha[0]: 0.408666 rates[0] ac ag at cg ct gt: 1.838397 4.369209 0.875040 0.831743 5.569020 1.000000 
+Inference[30]: Time 932.445841 GAMMA-based likelihood -355130.896119, best rearrangement setting 15
+alpha[0]: 0.408697 rates[0] ac ag at cg ct gt: 1.794579 4.297784 0.851514 0.833999 5.444720 1.000000 
+Inference[31]: Time 774.669371 GAMMA-based likelihood -355178.828559, best rearrangement setting 15
+alpha[0]: 0.408446 rates[0] ac ag at cg ct gt: 1.809952 4.338269 0.862264 0.828521 5.481210 1.000000 
+Inference[32]: Time 1931.959139 GAMMA-based likelihood -355024.569187, best rearrangement setting 10
+alpha[0]: 0.408702 rates[0] ac ag at cg ct gt: 1.836233 4.377665 0.871508 0.845708 5.567808 1.000000 
+Inference[33]: Time 1231.552180 GAMMA-based likelihood -355141.821802, best rearrangement setting 10
+alpha[0]: 0.408208 rates[0] ac ag at cg ct gt: 1.802050 4.314462 0.856484 0.823365 5.441719 1.000000 
+Inference[34]: Time 1807.153645 GAMMA-based likelihood -355081.349780, best rearrangement setting 15
+alpha[0]: 0.409331 rates[0] ac ag at cg ct gt: 1.864280 4.416661 0.880275 0.867762 5.604292 1.000000 
+Inference[35]: Time 750.658225 GAMMA-based likelihood -355049.948824, best rearrangement setting 15
+alpha[0]: 0.408455 rates[0] ac ag at cg ct gt: 1.814861 4.334182 0.866255 0.823518 5.470461 1.000000 
+Inference[36]: Time 1225.167257 GAMMA-based likelihood -355062.374821, best rearrangement setting 20
+alpha[0]: 0.408644 rates[0] ac ag at cg ct gt: 1.813344 4.328846 0.857569 0.834605 5.466409 1.000000 
+Inference[37]: Time 961.766532 GAMMA-based likelihood -355152.138154, best rearrangement setting 20
+alpha[0]: 0.407853 rates[0] ac ag at cg ct gt: 1.810486 4.327827 0.859227 0.830675 5.477326 1.000000 
+Inference[38]: Time 947.110320 GAMMA-based likelihood -355098.369421, best rearrangement setting 15
+alpha[0]: 0.408820 rates[0] ac ag at cg ct gt: 1.815526 4.327569 0.860078 0.829262 5.513130 1.000000 
+Inference[39]: Time 1127.539691 GAMMA-based likelihood -355042.446824, best rearrangement setting 15
+alpha[0]: 0.407892 rates[0] ac ag at cg ct gt: 1.812446 4.327251 0.857289 0.836731 5.476817 1.000000 
+Inference[40]: Time 877.193731 GAMMA-based likelihood -355127.805800, best rearrangement setting 15
+alpha[0]: 0.408388 rates[0] ac ag at cg ct gt: 1.824298 4.360112 0.870875 0.843787 5.546787 1.000000 
+Inference[41]: Time 1306.783286 GAMMA-based likelihood -355208.824035, best rearrangement setting 15
+alpha[0]: 0.408141 rates[0] ac ag at cg ct gt: 1.826288 4.351430 0.866890 0.844129 5.519189 1.000000 
+Inference[42]: Time 1497.823813 GAMMA-based likelihood -355080.446098, best rearrangement setting 10
+alpha[0]: 0.409107 rates[0] ac ag at cg ct gt: 1.858449 4.409474 0.885991 0.855912 5.615439 1.000000 
+Inference[43]: Time 756.885550 GAMMA-based likelihood -355175.538712, best rearrangement setting 15
+alpha[0]: 0.409047 rates[0] ac ag at cg ct gt: 1.829829 4.366164 0.864451 0.846292 5.521307 1.000000 
+Inference[44]: Time 2040.861277 GAMMA-based likelihood -355068.000861, best rearrangement setting 10
+alpha[0]: 0.407238 rates[0] ac ag at cg ct gt: 1.821341 4.334870 0.861459 0.836523 5.512412 1.000000 
+Inference[45]: Time 1644.576338 GAMMA-based likelihood -355138.423184, best rearrangement setting 20
+alpha[0]: 0.407134 rates[0] ac ag at cg ct gt: 1.809953 4.337661 0.870291 0.837018 5.453903 1.000000 
+Inference[46]: Time 776.985026 GAMMA-based likelihood -355228.907154, best rearrangement setting 15
+alpha[0]: 0.409276 rates[0] ac ag at cg ct gt: 1.829238 4.345586 0.868522 0.854915 5.537893 1.000000 
+Inference[47]: Time 775.014948 GAMMA-based likelihood -355230.492305, best rearrangement setting 10
+alpha[0]: 0.408711 rates[0] ac ag at cg ct gt: 1.806851 4.314516 0.857740 0.836073 5.469708 1.000000 
+Inference[48]: Time 745.432956 GAMMA-based likelihood -355192.763627, best rearrangement setting 15
+alpha[0]: 0.407850 rates[0] ac ag at cg ct gt: 1.801689 4.305413 0.856280 0.838330 5.438432 1.000000 
+Inference[49]: Time 757.406246 GAMMA-based likelihood -355177.273791, best rearrangement setting 15
+alpha[0]: 0.408956 rates[0] ac ag at cg ct gt: 1.818440 4.327079 0.861978 0.841510 5.492563 1.000000 
+Inference[50]: Time 717.413418 GAMMA-based likelihood -355153.210594, best rearrangement setting 15
+alpha[0]: 0.408317 rates[0] ac ag at cg ct gt: 1.834457 4.385078 0.870019 0.847206 5.540478 1.000000 
+Inference[51]: Time 844.920919 GAMMA-based likelihood -355038.414939, best rearrangement setting 15
+alpha[0]: 0.408345 rates[0] ac ag at cg ct gt: 1.813190 4.330464 0.864500 0.834526 5.471729 1.000000 
+Inference[52]: Time 889.587264 GAMMA-based likelihood -355145.167749, best rearrangement setting 10
+alpha[0]: 0.407898 rates[0] ac ag at cg ct gt: 1.808371 4.321667 0.855425 0.826814 5.461139 1.000000 
+Inference[53]: Time 746.095305 GAMMA-based likelihood -355139.498743, best rearrangement setting 15
+alpha[0]: 0.408508 rates[0] ac ag at cg ct gt: 1.825391 4.354410 0.873449 0.843809 5.538222 1.000000 
+Inference[54]: Time 1584.777004 GAMMA-based likelihood -355118.055137, best rearrangement setting 15
+alpha[0]: 0.407638 rates[0] ac ag at cg ct gt: 1.807689 4.313877 0.857543 0.832539 5.449900 1.000000 
+Inference[55]: Time 766.866593 GAMMA-based likelihood -355071.038000, best rearrangement setting 15
+alpha[0]: 0.407758 rates[0] ac ag at cg ct gt: 1.808846 4.330766 0.857246 0.826549 5.483271 1.000000 
+Inference[56]: Time 1309.423125 GAMMA-based likelihood -355053.935087, best rearrangement setting 15
+alpha[0]: 0.408249 rates[0] ac ag at cg ct gt: 1.813433 4.325770 0.857475 0.836097 5.471516 1.000000 
+Inference[57]: Time 804.638732 GAMMA-based likelihood -355030.307938, best rearrangement setting 10
+alpha[0]: 0.407683 rates[0] ac ag at cg ct gt: 1.807301 4.304372 0.854222 0.831201 5.448082 1.000000 
+Inference[58]: Time 883.242270 GAMMA-based likelihood -355131.835935, best rearrangement setting 20
+alpha[0]: 0.408397 rates[0] ac ag at cg ct gt: 1.830938 4.362822 0.868650 0.843969 5.553395 1.000000 
+Inference[59]: Time 1387.895298 GAMMA-based likelihood -355096.881815, best rearrangement setting 20
+alpha[0]: 0.407582 rates[0] ac ag at cg ct gt: 1.815689 4.337196 0.862142 0.831215 5.500122 1.000000 
+Inference[60]: Time 997.777969 GAMMA-based likelihood -355099.712308, best rearrangement setting 20
+alpha[0]: 0.408219 rates[0] ac ag at cg ct gt: 1.798122 4.289481 0.853077 0.821305 5.442762 1.000000 
+Inference[61]: Time 788.074421 GAMMA-based likelihood -355121.227485, best rearrangement setting 15
+alpha[0]: 0.407578 rates[0] ac ag at cg ct gt: 1.825753 4.356264 0.869584 0.837917 5.492762 1.000000 
+Inference[62]: Time 778.203312 GAMMA-based likelihood -355088.002839, best rearrangement setting 10
+alpha[0]: 0.407212 rates[0] ac ag at cg ct gt: 1.829531 4.373659 0.873889 0.839136 5.536797 1.000000 
+Inference[63]: Time 835.945753 GAMMA-based likelihood -355199.883147, best rearrangement setting 15
+alpha[0]: 0.407400 rates[0] ac ag at cg ct gt: 1.825105 4.359538 0.870911 0.845347 5.516054 1.000000 
+Inference[64]: Time 1283.767346 GAMMA-based likelihood -355117.412100, best rearrangement setting 15
+alpha[0]: 0.408775 rates[0] ac ag at cg ct gt: 1.837040 4.362840 0.870278 0.834949 5.530621 1.000000 
+Inference[65]: Time 1448.267676 GAMMA-based likelihood -355232.018914, best rearrangement setting 15
+alpha[0]: 0.408971 rates[0] ac ag at cg ct gt: 1.792083 4.290764 0.851990 0.833971 5.429819 1.000000 
+Inference[66]: Time 847.708917 GAMMA-based likelihood -355111.075153, best rearrangement setting 15
+alpha[0]: 0.407856 rates[0] ac ag at cg ct gt: 1.838798 4.388204 0.870889 0.845736 5.538367 1.000000 
+Inference[67]: Time 978.549982 GAMMA-based likelihood -355107.950990, best rearrangement setting 10
+alpha[0]: 0.408299 rates[0] ac ag at cg ct gt: 1.815186 4.330665 0.864401 0.835484 5.488332 1.000000 
+Inference[68]: Time 810.483871 GAMMA-based likelihood -355117.545368, best rearrangement setting 10
+alpha[0]: 0.408140 rates[0] ac ag at cg ct gt: 1.833362 4.363197 0.869506 0.826336 5.519138 1.000000 
+Inference[69]: Time 1573.955569 GAMMA-based likelihood -355099.822603, best rearrangement setting 10
+alpha[0]: 0.407719 rates[0] ac ag at cg ct gt: 1.851499 4.429084 0.878339 0.859286 5.569323 1.000000 
+Inference[70]: Time 1019.308852 GAMMA-based likelihood -355101.616621, best rearrangement setting 15
+alpha[0]: 0.407922 rates[0] ac ag at cg ct gt: 1.811398 4.319361 0.862469 0.824920 5.500085 1.000000 
+Inference[71]: Time 1850.709893 GAMMA-based likelihood -355120.926892, best rearrangement setting 15
+alpha[0]: 0.408258 rates[0] ac ag at cg ct gt: 1.820784 4.345034 0.863803 0.844108 5.529479 1.000000 
+Inference[72]: Time 856.587728 GAMMA-based likelihood -355153.181746, best rearrangement setting 10
+alpha[0]: 0.408719 rates[0] ac ag at cg ct gt: 1.818243 4.336614 0.859383 0.834443 5.510598 1.000000 
+Inference[73]: Time 749.882240 GAMMA-based likelihood -355105.332519, best rearrangement setting 15
+alpha[0]: 0.407741 rates[0] ac ag at cg ct gt: 1.814525 4.346457 0.860695 0.839261 5.489244 1.000000 
+Inference[74]: Time 800.160617 GAMMA-based likelihood -355116.814148, best rearrangement setting 15
+alpha[0]: 0.408334 rates[0] ac ag at cg ct gt: 1.818670 4.332597 0.869712 0.840164 5.529691 1.000000 
+Inference[75]: Time 1038.758633 GAMMA-based likelihood -355090.592929, best rearrangement setting 10
+alpha[0]: 0.407576 rates[0] ac ag at cg ct gt: 1.820573 4.355224 0.860133 0.841516 5.495722 1.000000 
+Inference[76]: Time 1395.411388 GAMMA-based likelihood -355224.838251, best rearrangement setting 15
+alpha[0]: 0.407493 rates[0] ac ag at cg ct gt: 1.833673 4.365217 0.870084 0.850574 5.541817 1.000000 
+Inference[77]: Time 644.849735 GAMMA-based likelihood -355088.527767, best rearrangement setting 10
+alpha[0]: 0.407566 rates[0] ac ag at cg ct gt: 1.841359 4.376181 0.877424 0.839368 5.567354 1.000000 
+Inference[78]: Time 1228.330243 GAMMA-based likelihood -355179.209675, best rearrangement setting 20
+alpha[0]: 0.407244 rates[0] ac ag at cg ct gt: 1.841377 4.412531 0.878994 0.848509 5.555416 1.000000 
+Inference[79]: Time 1299.204031 GAMMA-based likelihood -355063.695638, best rearrangement setting 20
+alpha[0]: 0.407898 rates[0] ac ag at cg ct gt: 1.825707 4.342227 0.869189 0.841177 5.534464 1.000000 
+Inference[80]: Time 1172.284189 GAMMA-based likelihood -355099.571411, best rearrangement setting 25
+alpha[0]: 0.407916 rates[0] ac ag at cg ct gt: 1.833652 4.371414 0.867552 0.837307 5.521032 1.000000 
+Inference[81]: Time 657.602447 GAMMA-based likelihood -355163.756624, best rearrangement setting 10
+alpha[0]: 0.408126 rates[0] ac ag at cg ct gt: 1.826316 4.376927 0.865205 0.841172 5.499184 1.000000 
+Inference[82]: Time 1194.053626 GAMMA-based likelihood -355096.130162, best rearrangement setting 20
+alpha[0]: 0.408846 rates[0] ac ag at cg ct gt: 1.809456 4.311007 0.854420 0.831847 5.484078 1.000000 
+Inference[83]: Time 1001.645480 GAMMA-based likelihood -355207.132637, best rearrangement setting 10
+alpha[0]: 0.408155 rates[0] ac ag at cg ct gt: 1.801996 4.322301 0.858715 0.836661 5.453716 1.000000 
+Inference[84]: Time 689.506770 GAMMA-based likelihood -355118.963785, best rearrangement setting 15
+alpha[0]: 0.408667 rates[0] ac ag at cg ct gt: 1.814824 4.305818 0.854577 0.826353 5.458432 1.000000 
+Inference[85]: Time 1055.831534 GAMMA-based likelihood -355106.933737, best rearrangement setting 20
+alpha[0]: 0.408282 rates[0] ac ag at cg ct gt: 1.814635 4.344821 0.858059 0.835233 5.483411 1.000000 
+Inference[86]: Time 831.592279 GAMMA-based likelihood -355161.492572, best rearrangement setting 10
+alpha[0]: 0.408141 rates[0] ac ag at cg ct gt: 1.828909 4.369745 0.861522 0.845990 5.489032 1.000000 
+Inference[87]: Time 908.442351 GAMMA-based likelihood -355116.419899, best rearrangement setting 20
+alpha[0]: 0.408217 rates[0] ac ag at cg ct gt: 1.804908 4.324764 0.859202 0.831918 5.453701 1.000000 
+Inference[88]: Time 1698.245988 GAMMA-based likelihood -355098.889378, best rearrangement setting 20
+alpha[0]: 0.408426 rates[0] ac ag at cg ct gt: 1.802940 4.289883 0.849946 0.822965 5.416061 1.000000 
+Inference[89]: Time 1447.458074 GAMMA-based likelihood -355070.558693, best rearrangement setting 10
+alpha[0]: 0.407129 rates[0] ac ag at cg ct gt: 1.810911 4.336160 0.863726 0.832409 5.468002 1.000000 
+Inference[90]: Time 961.584532 GAMMA-based likelihood -355103.107580, best rearrangement setting 15
+alpha[0]: 0.407351 rates[0] ac ag at cg ct gt: 1.796769 4.302115 0.850490 0.827747 5.428129 1.000000 
+Inference[91]: Time 937.342646 GAMMA-based likelihood -355117.406305, best rearrangement setting 15
+alpha[0]: 0.408351 rates[0] ac ag at cg ct gt: 1.831898 4.376324 0.869447 0.839864 5.500300 1.000000 
+Inference[92]: Time 896.162319 GAMMA-based likelihood -355045.501476, best rearrangement setting 15
+alpha[0]: 0.408204 rates[0] ac ag at cg ct gt: 1.826802 4.363344 0.872577 0.840914 5.534480 1.000000 
+Inference[93]: Time 1581.460888 GAMMA-based likelihood -355088.891296, best rearrangement setting 15
+alpha[0]: 0.408688 rates[0] ac ag at cg ct gt: 1.811513 4.317258 0.859201 0.838228 5.488143 1.000000 
+Inference[94]: Time 1159.735407 GAMMA-based likelihood -355136.164063, best rearrangement setting 10
+alpha[0]: 0.408725 rates[0] ac ag at cg ct gt: 1.798136 4.292006 0.850279 0.829911 5.448038 1.000000 
+Inference[95]: Time 1215.828453 GAMMA-based likelihood -355166.923697, best rearrangement setting 10
+alpha[0]: 0.408422 rates[0] ac ag at cg ct gt: 1.812615 4.307673 0.861175 0.840547 5.445506 1.000000 
+Inference[96]: Time 706.293736 GAMMA-based likelihood -355189.228920, best rearrangement setting 15
+alpha[0]: 0.408403 rates[0] ac ag at cg ct gt: 1.847010 4.410209 0.878246 0.833133 5.566911 1.000000 
+Inference[97]: Time 1118.212474 GAMMA-based likelihood -355149.132506, best rearrangement setting 20
+alpha[0]: 0.407594 rates[0] ac ag at cg ct gt: 1.828883 4.368246 0.869203 0.837906 5.517291 1.000000 
+Inference[98]: Time 686.120433 GAMMA-based likelihood -355173.387552, best rearrangement setting 10
+alpha[0]: 0.407728 rates[0] ac ag at cg ct gt: 1.806098 4.318373 0.858066 0.833768 5.461889 1.000000 
+Inference[99]: Time 1594.580438 GAMMA-based likelihood -355004.169923, best rearrangement setting 10
+alpha[0]: 0.407488 rates[0] ac ag at cg ct gt: 1.833886 4.389262 0.874664 0.840914 5.557512 1.000000 
+
+
+Conducting final model optimizations on all 100 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -355087.844736 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.0
+Inference[1] final GAMMA-based Likelihood: -355066.078118 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.1
+Inference[2] final GAMMA-based Likelihood: -355117.316487 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.2
+Inference[3] final GAMMA-based Likelihood: -355053.984608 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.3
+Inference[4] final GAMMA-based Likelihood: -355285.508804 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.4
+Inference[5] final GAMMA-based Likelihood: -355151.024103 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.5
+Inference[6] final GAMMA-based Likelihood: -355180.621495 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.6
+Inference[7] final GAMMA-based Likelihood: -355053.029540 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.7
+Inference[8] final GAMMA-based Likelihood: -355059.741173 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.8
+Inference[9] final GAMMA-based Likelihood: -355040.015288 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.9
+Inference[10] final GAMMA-based Likelihood: -355228.884628 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.10
+Inference[11] final GAMMA-based Likelihood: -355106.275151 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.11
+Inference[12] final GAMMA-based Likelihood: -355150.881681 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.12
+Inference[13] final GAMMA-based Likelihood: -355068.419077 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.13
+Inference[14] final GAMMA-based Likelihood: -355147.960799 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.14
+Inference[15] final GAMMA-based Likelihood: -355061.577317 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.15
+Inference[16] final GAMMA-based Likelihood: -355114.925888 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.16
+Inference[17] final GAMMA-based Likelihood: -355076.539147 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.17
+Inference[18] final GAMMA-based Likelihood: -355044.093749 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.18
+Inference[19] final GAMMA-based Likelihood: -355226.249481 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.19
+Inference[20] final GAMMA-based Likelihood: -355139.209315 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.20
+Inference[21] final GAMMA-based Likelihood: -355113.300080 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.21
+Inference[22] final GAMMA-based Likelihood: -355133.198133 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.22
+Inference[23] final GAMMA-based Likelihood: -355111.600683 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.23
+Inference[24] final GAMMA-based Likelihood: -355145.214379 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.24
+Inference[25] final GAMMA-based Likelihood: -355061.769961 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.25
+Inference[26] final GAMMA-based Likelihood: -355179.597219 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.26
+Inference[27] final GAMMA-based Likelihood: -355083.867756 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.27
+Inference[28] final GAMMA-based Likelihood: -355053.274189 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.28
+Inference[29] final GAMMA-based Likelihood: -355034.631326 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.29
+Inference[30] final GAMMA-based Likelihood: -355130.650964 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.30
+Inference[31] final GAMMA-based Likelihood: -355178.785662 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.31
+Inference[32] final GAMMA-based Likelihood: -355024.525219 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.32
+Inference[33] final GAMMA-based Likelihood: -355141.359375 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.33
+Inference[34] final GAMMA-based Likelihood: -355080.793067 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.34
+Inference[35] final GAMMA-based Likelihood: -355050.068648 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.35
+Inference[36] final GAMMA-based Likelihood: -355061.670180 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.36
+Inference[37] final GAMMA-based Likelihood: -355152.000775 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.37
+Inference[38] final GAMMA-based Likelihood: -355098.214593 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.38
+Inference[39] final GAMMA-based Likelihood: -355042.363430 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.39
+Inference[40] final GAMMA-based Likelihood: -355127.827925 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.40
+Inference[41] final GAMMA-based Likelihood: -355209.015001 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.41
+Inference[42] final GAMMA-based Likelihood: -355080.454376 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.42
+Inference[43] final GAMMA-based Likelihood: -355175.738846 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.43
+Inference[44] final GAMMA-based Likelihood: -355067.752354 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.44
+Inference[45] final GAMMA-based Likelihood: -355138.881666 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.45
+Inference[46] final GAMMA-based Likelihood: -355229.738252 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.46
+Inference[47] final GAMMA-based Likelihood: -355230.932553 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.47
+Inference[48] final GAMMA-based Likelihood: -355193.122086 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.48
+Inference[49] final GAMMA-based Likelihood: -355177.199056 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.49
+Inference[50] final GAMMA-based Likelihood: -355153.239969 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.50
+Inference[51] final GAMMA-based Likelihood: -355038.356052 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.51
+Inference[52] final GAMMA-based Likelihood: -355144.844635 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.52
+Inference[53] final GAMMA-based Likelihood: -355139.643230 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.53
+Inference[54] final GAMMA-based Likelihood: -355117.924602 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.54
+Inference[55] final GAMMA-based Likelihood: -355070.775896 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.55
+Inference[56] final GAMMA-based Likelihood: -355053.910965 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.56
+Inference[57] final GAMMA-based Likelihood: -355029.966891 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.57
+Inference[58] final GAMMA-based Likelihood: -355131.984220 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.58
+Inference[59] final GAMMA-based Likelihood: -355097.017474 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.59
+Inference[60] final GAMMA-based Likelihood: -355099.187775 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.60
+Inference[61] final GAMMA-based Likelihood: -355121.428271 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.61
+Inference[62] final GAMMA-based Likelihood: -355088.126385 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.62
+Inference[63] final GAMMA-based Likelihood: -355200.207173 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.63
+Inference[64] final GAMMA-based Likelihood: -355117.400267 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.64
+Inference[65] final GAMMA-based Likelihood: -355232.132934 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.65
+Inference[66] final GAMMA-based Likelihood: -355111.209652 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.66
+Inference[67] final GAMMA-based Likelihood: -355107.883545 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.67
+Inference[68] final GAMMA-based Likelihood: -355117.324594 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.68
+Inference[69] final GAMMA-based Likelihood: -355099.694481 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.69
+Inference[70] final GAMMA-based Likelihood: -355101.518065 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.70
+Inference[71] final GAMMA-based Likelihood: -355121.008204 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.71
+Inference[72] final GAMMA-based Likelihood: -355153.123656 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.72
+Inference[73] final GAMMA-based Likelihood: -355105.253794 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.73
+Inference[74] final GAMMA-based Likelihood: -355117.023485 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.74
+Inference[75] final GAMMA-based Likelihood: -355090.502488 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.75
+Inference[76] final GAMMA-based Likelihood: -355224.923534 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.76
+Inference[77] final GAMMA-based Likelihood: -355088.660143 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.77
+Inference[78] final GAMMA-based Likelihood: -355179.442229 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.78
+Inference[79] final GAMMA-based Likelihood: -355063.908462 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.79
+Inference[80] final GAMMA-based Likelihood: -355099.692339 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.80
+Inference[81] final GAMMA-based Likelihood: -355163.718169 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.81
+Inference[82] final GAMMA-based Likelihood: -355096.106607 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.82
+Inference[83] final GAMMA-based Likelihood: -355207.298058 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.83
+Inference[84] final GAMMA-based Likelihood: -355118.533829 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.84
+Inference[85] final GAMMA-based Likelihood: -355106.805387 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.85
+Inference[86] final GAMMA-based Likelihood: -355161.378168 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.86
+Inference[87] final GAMMA-based Likelihood: -355116.282490 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.87
+Inference[88] final GAMMA-based Likelihood: -355098.053793 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.88
+Inference[89] final GAMMA-based Likelihood: -355070.543521 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.89
+Inference[90] final GAMMA-based Likelihood: -355102.669750 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.90
+Inference[91] final GAMMA-based Likelihood: -355117.517816 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.91
+Inference[92] final GAMMA-based Likelihood: -355045.580284 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.92
+Inference[93] final GAMMA-based Likelihood: -355088.615175 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.93
+Inference[94] final GAMMA-based Likelihood: -355135.803797 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.94
+Inference[95] final GAMMA-based Likelihood: -355167.144266 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.95
+Inference[96] final GAMMA-based Likelihood: -355189.239276 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.96
+Inference[97] final GAMMA-based Likelihood: -355149.077030 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.97
+Inference[98] final GAMMA-based Likelihood: -355173.056484 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.98
+Inference[99] final GAMMA-based Likelihood: -355004.099938 tree written to file /home/mark/consommer/HIV/RAxML_result.top.RUN.99
+
+
+Starting final GAMMA-based thorough Optimization on tree 99 likelihood -355004.099938 .... 
+
+Final GAMMA-based Score of best tree -355004.099938
+
+Program execution info written to /home/mark/consommer/HIV/RAxML_info.top
+Best-scoring ML tree written to: /home/mark/consommer/HIV/RAxML_bestTree.top
+
+Overall execution time: 109002.281932 secs or 30.278412 hours or 1.261600 days
+

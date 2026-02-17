@@ -1,0 +1,10 @@
+Sample	Patient	Cohort	ReadType	Read1	Read2	ReadU
+1008510_S6	1008510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1008510-1_S6_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1008510-1_S6_R2_001.fastq.gz	
+1008510_S3	1008510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1008510_S3_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1008510_S3_R2_001.fastq.gz	
+1015210_S5	1015210	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1015210-1_S5_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1015210-1_S5_R2_001.fastq.gz	
+1015210_S2	1015210	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1015210_S2_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1015210_S2_R2_001.fastq.gz	
+1608510_S4	1608510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1608510-1_S4_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1608510-1_S4_R2_001.fastq.gz	
+1608510_S1	1608510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1608510_S1_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NovaSeq/20190614_scleroderma/1608510_S1_R1_001.fastq.gz	
+1008510_S3N	1008510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1008510_S3_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1008510_S3_R2_001.fastq.gz	
+1015210_S2N	1015210	Scleroderma	paired	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1015210_S2_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1015210_S2_R2_001.fastq.gz	
+1608510_S1N	1608510	Scleroderma	paired	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1608510_S1_R1_001.fastq.gz	/oak/stanford/groups/quake/shared/NextSeq_Sheela_Mark/1608510_S1_R2_001.fastq.gz	

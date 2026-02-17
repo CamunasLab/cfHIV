@@ -1,0 +1,174 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    login1 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s all_sequences_aligned.fa -m GTR+G -nt AUTO -bb 1000 --prefix hiv_phylo
+Seed:    996741 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri May 30 13:48:57 2025
+Kernel:  AVX+FMA - auto-detect threads (256 CPU cores detected)
+
+Reading alignment file all_sequences_aligned.fa ... Fasta format detected
+Reading fasta file: done in 0.0126984 secs using 87.25% CPU
+Alignment most likely contains DNA/RNA sequences
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 51 sequences with 9508 columns, 3168 distinct patterns
+2410 parsimony-informative, 546 singleton sites, 6552 constant sites
+                          Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.0240187 secs using 1.967e+04% CPU
+   1  100008_1                    5.95%    passed     99.84%
+   2  100008_2                    6.50%    passed     99.66%
+   3  100008_3                    5.78%    passed     99.91%
+   4  100137_1                   10.18%    passed     91.00%
+   5  100137_2                    9.26%    passed     97.16%
+   6  100137_3                    6.18%    passed     98.56%
+   7  100177_1                    6.08%    passed     98.48%
+   8  100177_2                    6.57%    passed     98.96%
+   9  100177_3                    6.26%    passed     98.06%
+  10  100200_1                    5.67%    passed     91.22%
+  11  100200_2                    5.93%    passed     99.56%
+  12  100200_3                    6.31%    passed     98.26%
+  13  100206_1                    5.40%    passed     98.92%
+  14  100206_3                    5.94%    passed     97.15%
+  15  100217_1                    5.19%    passed     95.42%
+  16  100217_2                    8.68%    passed     83.09%
+  17  100217_3                    5.72%    passed     95.94%
+  18  100248_1                    6.04%    passed     93.94%
+  19  100248_2                    5.74%    passed     97.25%
+  20  100248_3                    7.43%    passed     98.38%
+  21  100255_1                    5.45%    passed     98.27%
+  22  100255_3                    6.54%    passed     94.93%
+  23  100256_1                    6.68%    passed     89.21%
+  24  100256_3                    6.65%    passed     81.30%
+  25  100257_1                    6.27%    passed     99.90%
+  26  100257_2                    5.38%    passed     99.36%
+  27  100257_3                    5.89%    passed     98.86%
+  28  100261_1                    6.23%    passed     99.36%
+  29  100261_2                    6.33%    passed     96.85%
+  30  100261_3                    6.80%    passed     95.86%
+  31  100306_1                    5.94%    passed     90.95%
+  32  100306_2                    7.40%    passed     85.55%
+  33  100306_3                    6.44%    passed     90.35%
+  34  100337_1                    6.37%    passed     97.44%
+  35  100337_2                    5.94%    passed     94.03%
+  36  100337_3                    6.30%    passed     93.94%
+  37  CAP137                     84.44%    passed      6.49%
+  38  CAP177                     73.56%    passed     33.77%
+  39  CAP200                     72.93%    passed     40.22%
+  40  CAP206                      4.51%    passed     45.63%
+  41  CAP217                      7.23%    passed     49.60%
+  42  CAP239                      4.30%    passed     93.44%
+  43  CAP248                      3.72%    passed     45.45%
+  44  CAP255                      4.67%    passed     87.71%
+  45  CAP256                      4.00%    passed     70.58%
+  46  CAP257                      4.21%    passed     67.05%
+  47  CAP261                     72.61%    passed     38.93%
+  48  CAP306                     72.77%    failed      0.52%
+  49  CAP337                      5.16%    passed     63.60%
+  50  CAP8                        4.52%    passed     54.30%
+  51  CAP256_primary_infecting   72.64%    passed     18.00%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                      14.17%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.029 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 996741)...
+
+NOTE: 33 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 256 CPU cores
+Increase to 10 rounds for branch lengths
+1014 trees examined
+Threads: 1 / Time: 256.025 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -87715
+Threads: 2 / Time: 242.061 sec / Speedup: 1.058 / Efficiency: 53% / LogL: -87715
+Threads: 3 / Time: 217.683 sec / Speedup: 1.176 / Efficiency: 39% / LogL: -87715
+BEST NUMBER OF THREADS: 2
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -53637.766
+2. Current log-likelihood: -50338.798
+3. Current log-likelihood: -50312.926
+4. Current log-likelihood: -50312.740
+Optimal log-likelihood: -50312.731
+Rate parameters:  A-C: 1.72555  A-G: 4.69769  A-T: 0.87680  C-G: 0.67656  C-T: 5.73487  G-T: 1.00000
+Base frequencies:  A: 0.364  C: 0.174  G: 0.239  T: 0.223
+Gamma shape alpha: 0.246
+Parameters optimization took 4 rounds (1.375 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0365081 secs using 175.8% CPU
+Computing ML distances took 0.038761 sec (of wall-clock time) 0.066033 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.0130454 secs using 94.37% CPU
+Computing RapidNJ tree took 0.060202 sec (of wall-clock time) 0.019911 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -50497.322
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.912 second
+Computing log-likelihood of 98 initial trees ... 6.582 seconds
+Current best score: -50312.731
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -50274.988
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -50258.337
+Iteration 10 / LogL: -50260.075 / Time: 0h:12m:16s
+Iteration 20 / LogL: -50260.091 / Time: 0h:12m:21s
+Finish initializing candidate tree set (6)
+Current best tree score: -50258.337 / CPU time: 22.934
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -50264.938 / Time: 0h:12m:29s (0h:31m:1s left)
+Iteration 40 / LogL: -50294.662 / Time: 0h:12m:38s (0h:20m:5s left)
+Iteration 50 / LogL: -50258.342 / Time: 0h:12m:46s (0h:13m:33s left)
+Log-likelihood cutoff on original alignment: -50316.630
+Iteration 60 / LogL: -50259.209 / Time: 0h:12m:55s (0h:9m:12s left)
+Iteration 70 / LogL: -50267.346 / Time: 0h:13m:4s (0h:6m:3s left)
+Iteration 80 / LogL: -50266.277 / Time: 0h:13m:13s (0h:3m:40s left)
+Iteration 90 / LogL: -50258.752 / Time: 0h:13m:21s (0h:1m:48s left)
+Iteration 100 / LogL: -50258.577 / Time: 0h:13m:27s (0h:0m:16s left)
+Log-likelihood cutoff on original alignment: -50316.630
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:13m:35s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -50258.337
+Optimal log-likelihood: -50258.334
+Rate parameters:  A-C: 1.72057  A-G: 4.74958  A-T: 0.86913  C-G: 0.69273  C-T: 5.71013  G-T: 1.00000
+Base frequencies:  A: 0.364  C: 0.174  G: 0.239  T: 0.223
+Gamma shape alpha: 0.246
+Parameters optimization took 1 rounds (0.154 sec)
+BEST SCORE FOUND : -50258.334
+Creating bootstrap support values...
+Split supports printed to NEXUS file hiv_phylo.splits.nex
+Total tree length: 1.169
+
+Total number of iterations: 103
+CPU time used for tree search: 165.879 sec (0h:2m:45s)
+Wall-clock time used for tree search: 96.766 sec (0h:1m:36s)
+Total CPU time used: 1513.241 sec (0h:25m:13s)
+Total wall-clock time used: 815.329 sec (0h:13m:35s)
+
+Computing bootstrap consensus tree...
+Reading input file hiv_phylo.splits.nex...
+51 taxa and 190 splits.
+Consensus tree written to hiv_phylo.contree
+Reading input trees file hiv_phylo.contree
+Log-likelihood of consensus tree: -50258.337
+
+Analysis results written to: 
+  IQ-TREE report:                hiv_phylo.iqtree
+  Maximum-likelihood tree:       hiv_phylo.treefile
+  Likelihood distances:          hiv_phylo.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          hiv_phylo.splits.nex
+  Consensus tree:                hiv_phylo.contree
+  Screen log file:               hiv_phylo.log
+
+Date and Time: Fri May 30 14:02:35 2025

@@ -1,0 +1,20 @@
+name: marksouthafrica-ete-r
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - bioconductor-edger
+  - biopython
+  - ete3
+  - ipykernel
+  - matplotlib-base
+  - matplotlib-inline
+  - openpyxl
+  - pandas>=2.1
+  - pyarrow>=14
+  - python=3.10
+  - r-base
+  - rpy2
+  - seaborn
+
+prefix: "/home/mercedes/micromamba/envs/marksouthafrica-ete-r"

@@ -1,0 +1,47 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.2.10 released by Alexandros Stamatakis on March 2017.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+RAxML Bipartition Computation: Drawing support values from trees in file RAxML_bootstrap.B1 onto tree in file RAxML_bestTree.top
+
+
+RAxML was called as follows:
+
+../../ecdysis/software/standard-RAxML-8.2.10/raxmlHPC-PTHREADS-AVX2 -n bootstrapped -T 6 -m GTRGAMMA -p 1989 -# 100 -b 1989 -f b -t RAxML_bestTree.top -z RAxML_bootstrap.B1 
+
+
+
+
+Found 1 tree in File RAxML_bestTree.top
+
+
+
+Found 100 trees in File RAxML_bootstrap.B1
+
+
+
+Found 1 tree in File RAxML_bestTree.top
+
+
+
+Time for Computation of Bipartitions 0.054502
+Tree with bipartitions written to file:  /home/mark/consommer/HIV/RAxML_bipartitions.bootstrapped
+Tree with bipartitions as branch labels written to file:  /home/mark/consommer/HIV/RAxML_bipartitionsBranchLabels.bootstrapped
+Execution information file written to :  /home/mark/consommer/HIV/RAxML_info.bootstrapped
