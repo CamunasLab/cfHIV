@@ -10,10 +10,6 @@ plt.rcParams["svg.fonttype"] = "none"
 import seaborn as sns
 from matplotlib.patches import Patch
 
-import rpy2.robjects as ro
-from rpy2.robjects import pandas2ri
-from rpy2.robjects.conversion import localconverter
-
 from ete3 import NCBITaxa
 
 # =============================================================================
@@ -206,126 +202,6 @@ def collapse_to_rank(counts_taxid_df, rank):
 
 
 # =============================================================================
-# 3) edgeR wrappers
-# =============================================================================
-def edger_plasma_vs_water(counts, meta):
-    """
-    edgeR DE: plasma vs water only.
-
-    Returns
-    -------
-    res : pd.DataFrame
-    logcpm : pd.DataFrame
-    meta2 : pd.DataFrame (plasma+water only, aligned)
-    """
-    meta2 = meta.loc[counts.columns].copy()
-    meta2 = meta2[meta2["group"].isin(["plasma", "water"])]
-
-    X = counts.loc[:, meta2.index].round().astype(int)
-
-    with localconverter(ro.default_converter + pandas2ri.converter):
-        ro.globalenv["X"] = X
-        ro.globalenv["meta"] = meta2
-
-    ro.r("""
-      y <- read_counts_df(X)
-      meta3 <- meta[colnames(y), , drop=FALSE]
-      meta3$group <- relevel(factor(meta3$group), ref='water')
-      design <- model.matrix(~ group, data=meta3)
-
-      fit <- run_de(y, design)
-      qlf <- glmQLFTest(fit, coef=2)
-      res <- topTags(qlf, n=Inf)$table
-      assign("res", res, envir=.GlobalEnv)
-
-      lcpm <- cpm(y, log=TRUE, prior.count=1)
-      assign("lcpm", lcpm, envir=.GlobalEnv)
-      assign("lcpm_rownames", rownames(lcpm), envir=.GlobalEnv)
-      assign("lcpm_colnames", colnames(lcpm), envir=.GlobalEnv)
-    """)
-
-    with localconverter(ro.default_converter + pandas2ri.converter):
-        res = ro.conversion.rpy2py(ro.globalenv["res"])
-        lcpm = ro.conversion.rpy2py(ro.globalenv["lcpm"])
-        rn = list(ro.conversion.rpy2py(ro.globalenv["lcpm_rownames"]))
-        cn = list(ro.conversion.rpy2py(ro.globalenv["lcpm_colnames"]))
-
-    logcpm = pd.DataFrame(lcpm, index=rn, columns=cn) if isinstance(lcpm, np.ndarray) else lcpm
-    return res, logcpm, meta2
-
-
-def edger_bnabs_plasma(counts, meta, design_df, bNAbs_ref=None):
-    """
-    Plasma-only DE: taxa ~ Location + bNAbs
-
-    Returns
-    -------
-    res : pd.DataFrame
-    logcpm : pd.DataFrame
-    d : pd.DataFrame (design aligned to plasma samples)
-    """
-    meta2 = meta.loc[counts.columns].copy()
-    plasma_cols = meta2.index[meta2["group"].eq("plasma")]
-    counts_plasma = counts.loc[:, plasma_cols]
-
-    d = design_df.loc[counts_plasma.columns].copy()
-    d["Location"] = d["Location"].astype("category")
-    d["bNAbs"] = d["bNAbs"].astype("category")
-
-    if d["bNAbs"].nunique() < 2:
-        raise ValueError("bNAbs has <2 levels in these plasma samples (cannot test bNAbs).")
-
-    X = counts_plasma.round().astype(int)
-
-    with localconverter(ro.default_converter + pandas2ri.converter):
-        ro.globalenv["X"] = X
-        ro.globalenv["d"] = d
-
-    if bNAbs_ref is not None:
-        ro.globalenv["bNAbs_ref"] = bNAbs_ref
-        set_ref = "d2$bNAbs <- relevel(factor(d2$bNAbs), ref=bNAbs_ref)"
-    else:
-        set_ref = "d2$bNAbs <- factor(d2$bNAbs)"
-
-    ro.r(f"""
-      y <- read_counts_df(X)
-      d2 <- d[colnames(y), , drop=FALSE]
-      d2$Location <- factor(d2$Location)
-      {set_ref}
-
-      design <- model.matrix(~ Location + bNAbs, data=d2)
-      fit <- run_de(y, design)
-
-      cn <- colnames(design)
-      bn_cols <- grep("^bNAbs", cn)
-
-      if (length(levels(d2$bNAbs)) == 2) {{
-        qlf <- glmQLFTest(fit, coef=bn_cols[1])
-        res <- topTags(qlf, n=Inf)$table
-      }} else {{
-        qlf <- glmQLFTest(fit, coef=bn_cols)
-        res <- topTags(qlf, n=Inf)$table
-      }}
-
-      assign("res", res, envir=.GlobalEnv)
-
-      lcpm <- cpm(y, log=TRUE, prior.count=1)
-      assign("lcpm", lcpm, envir=.GlobalEnv)
-      assign("lcpm_rownames", rownames(lcpm), envir=.GlobalEnv)
-      assign("lcpm_colnames", colnames(lcpm), envir=.GlobalEnv)
-    """)
-
-    with localconverter(ro.default_converter + pandas2ri.converter):
-        res = ro.conversion.rpy2py(ro.globalenv["res"])
-        lcpm = ro.conversion.rpy2py(ro.globalenv["lcpm"])
-        rn = list(ro.conversion.rpy2py(ro.globalenv["lcpm_rownames"]))
-        cn = list(ro.conversion.rpy2py(ro.globalenv["lcpm_colnames"]))
-
-    logcpm = pd.DataFrame(lcpm, index=rn, columns=cn) if isinstance(lcpm, np.ndarray) else lcpm
-    return res, logcpm, d
-
-
-# =============================================================================
 # 4) Plotting: volcano + clustermaps
 # =============================================================================
 def volcano_plot(res, fdr_thr=0.05, lfc_thr=1.0, label_top=10):
@@ -377,50 +253,98 @@ def volcano_plot(res, fdr_thr=0.05, lfc_thr=1.0, label_top=10):
 
 def volcano_plot_fdr(res, fdr_thr=0.05, lfc_thr=1.0, label_top=10):
     """
-    Basic volcano plot (no family coloring). Labels top hits by FDR.
+    Volcano plot styled like the 'right' example:
+    - white background, no grid
+    - thick black axes/spines
+    - gray nonsig points, orange sig points
+    - thicker dashed threshold lines
+    - labels with leader lines (uses adjustText if available)
     """
-    from adjustText import adjust_text
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+    # Optional: use adjustText if installed
+    try:
+        from adjustText import adjust_text
+        have_adjust = True
+    except ImportError:
+        have_adjust = False
 
     df = res.copy()
-    sns.set_theme(font_scale=2)
-    sns.set_style('whitegrid')
     df["FDR"] = pd.to_numeric(df["FDR"], errors="coerce")
     df["PValue"] = pd.to_numeric(df["PValue"], errors="coerce")
     df["logFC"] = pd.to_numeric(df["logFC"], errors="coerce")
-    df = df.dropna(subset=["logFC", "PValue", "FDR"])
+    df = df.dropna(subset=["logFC", "FDR"])
 
-    df["neglog10p"] = -np.log10(df["FDR"].clip(lower=1e-300))
+    df["neglog10fdr"] = -np.log10(df["FDR"].clip(lower=1e-300))
     sig = (df["FDR"] < fdr_thr) & (df["logFC"].abs() >= lfc_thr)
 
-    fig, ax = plt.subplots(figsize=(8, 7))
-    ax.scatter(df.loc[~sig, "logFC"], df.loc[~sig, "neglog10p"], color='black', s=5, alpha=0.35)
-    ax.scatter(df.loc[sig, "logFC"], df.loc[sig, "neglog10p"], s=10, color='orange', alpha=0.9)
+    # ---- Figure / style to match right ----
+    fig, ax = plt.subplots(figsize=(8.2, 6.2))
+    ax.set_facecolor("white")
+    ax.grid(False)
 
-    ax.axvline(-lfc_thr, linestyle="--", color="grey")
-    ax.axvline(lfc_thr, linestyle="--", color="grey")
-    ax.axhline(-np.log10(fdr_thr), linestyle="--", color="grey")
+    # Thicker spines (axes border)
+    for sp in ax.spines.values():
+        sp.set_linewidth(3)
+        sp.set_color("black")
 
-    ax.set_xlabel("log2 fold-change (plasma vs water)")
-    ax.set_ylabel("-log10(PValue)")
-    ax.set_title("Volcano plot bnabs")
+    ax.tick_params(axis="both", which="both", width=2.5, length=6, labelsize=18)
 
-    top = df.sort_values("FDR").head(label_top)
-    texts = []
-    for name, row in top.iterrows():
-        texts.append(ax.text(row["logFC"], row["neglog10p"], str(name), fontsize=10))
-
-    adjust_text(
-        texts,
-        ax=ax,
-        arrowprops=dict(arrowstyle="-", lw=0.5, color="grey"),
-        expand_points=(1.2, 1.3),
-        expand_text=(1.2, 1.3),
+    # Points: gray for nonsig, orange for sig
+    ax.scatter(
+        df.loc[~sig, "logFC"], df.loc[~sig, "neglog10fdr"],
+        s=14, color="#171616", alpha=0.55, linewidth=0
+    )
+    ax.scatter(
+        df.loc[sig, "logFC"], df.loc[sig, "neglog10fdr"],
+        s=34, color="orange", alpha=0.95, edgecolor="none"
     )
 
+    # Threshold lines (thicker dashed)
+    thr_color = "#7a7a7a"
+    ax.axvline(-lfc_thr, linestyle="--", color=thr_color, linewidth=3, zorder=0)
+    ax.axvline(lfc_thr,  linestyle="--", color=thr_color, linewidth=3, zorder=0)
+    ax.axhline(-np.log10(fdr_thr), linestyle="--", color=thr_color, linewidth=3, zorder=0)
+
+    # Labels/title like right
+    ax.set_xlabel("log2 fold-change\n(plasma vs NC)", fontsize=22)
+    ax.set_ylabel("-log10(FDR)", fontsize=22)
+    ax.set_title("")  # right plot effectively has no big title inside axes
+
+    # ---- Label top hits (usually label among significant) ----
+    # If you want EXACTLY like right: label top by FDR (or top sig by FDR)
+    top = df.loc[sig].sort_values("FDR").head(label_top) if sig.any() else df.sort_values("FDR").head(label_top)
+
+    texts = []
+    for name, row in top.iterrows():
+        texts.append(
+            ax.text(
+                row["logFC"], row["neglog10fdr"], str(name),
+                fontsize=16, color="#4a4a4a", zorder=10,
+                bbox=dict(facecolor="white", edgecolor="none", pad=0.25, alpha=0.9)
+            )
+        )
+
+    if have_adjust and texts:
+        adjust_text(
+            texts,
+            ax=ax,
+            arrowprops=dict(arrowstyle="-", lw=2, color="#7a7a7a"),
+            expand_points=(1.4, 1.6),
+            expand_text=(1.2, 1.4),
+        )
+    elif (not have_adjust) and texts:
+        # simple fallback: nudge labels a bit so they’re readable
+        for t in texts:
+            x, y = t.get_position()
+            t.set_position((x + 0.15, y + 0.2))
+
     fig.tight_layout()
+    sns.despine()
     plt.show()
     return fig, ax
-
 
 def clustermap_hits(
     logcpm, meta_pw, res,

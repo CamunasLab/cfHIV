@@ -1,4 +1,4 @@
-name: marksouthafrica-ete-r
+name: r-marksouthafrica-ete
 channels:
   - bioconda
   - conda-forge
@@ -17,4 +17,4 @@ dependencies:
   - rpy2
   - seaborn
 
-prefix: "/home/mercedes/micromamba/envs/marksouthafrica-ete-r"
+prefix: "/home/mercedes/micromamba/envs/r-marksouthafrica-ete"

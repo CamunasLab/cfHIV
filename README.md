@@ -1,11 +1,12 @@
 # cfHIV  
 ### Integrated cfRNA/cfDNA analysis of HIV, host transcriptome, and microbiome correlates of broadly neutralizing antibody development
 
+![Workflow](figures/README/s1_time_series_years.svg)
 ---
-
 ## Overview
 
 This repository contains the complete computational analysis pipeline used to study host, viral, and microbial correlates of broadly neutralizing antibody (bNAb) development in people living with HIV (PLWH) using plasma cell-free nucleic acids.
+
 
 The pipeline integrates:
 
@@ -46,7 +47,6 @@ The pipeline enables simultaneous recovery of:
 
 - Host immune transcriptomic signatures
 - HIV viral genotypes from cfRNA
-- Microbial taxa present in circulation
 - Viral co-infections such as GBV-C
 
 Key findings supported by this codebase include:
