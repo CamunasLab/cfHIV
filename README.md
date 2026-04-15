@@ -1,7 +1,7 @@
 # cfHIV  
 ### Integrated cfRNA/cfDNA analysis of HIV, host transcriptome, and microbiome correlates of broadly neutralizing antibody development
 
-![Workflow](figures/README/s1_time_series_years.svg)
+![Workflow](figures/README/striking_image.tiff)
 ---
 ## Overview
 
